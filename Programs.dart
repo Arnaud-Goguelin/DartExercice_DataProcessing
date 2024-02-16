@@ -6,5 +6,18 @@ void main(List<String> arguments) {
     exit(1);
   }
   final inputFile = arguments.first;
-  print(inputFile);
+  // à recoder avec async / await syntaxe
+  final lines = File(inputFile).readAsLinesSync();
 }
+/*
+lines = readFile(inputFile)
+durationByTag = empty tag
+lines.removeFirst()
+for (line in lines)
+  values = lines.split(',')
+  duration = values[3]
+  tag = values[5]
+  update(durationByTag[tag], duration)
+end
+printAll(durationByTag)
+*/
